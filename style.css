@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  color: #003366;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #0099cc;
+  font-weight: 600;
+}
+
+.navbar {
+  background-color: #0e242b;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff !important;
+}
+
+.nav-link {
+  color: #e0f7fa !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ff7f50 !important;
+}
+
+.jumbotron {
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.btn-splash {
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-splash:hover {
+  background-color: #ff9966;
+  color: white;
+}
+
+footer {
+  background-color: #003366;
+  color: #e0f7fa;
+  font-size: 0.9rem;
+}
+
+footer small {
+  letter-spacing: 0.5px;
+}
+
+.text-highlight {
+  color: #ff7f50;
+  font-weight: 600;
+}
