@@ -9,7 +9,7 @@
 </head>
 
 <body>
- 
+  <!-- NAV -->
   <nav class="navbar navbar-expand-sm navbar-dark">
     <a class="navbar-brand" href="index.html">Splashes</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -29,79 +29,156 @@
     </div>
   </nav>
 
-  <main class="container py-5">
-    <h1>Services</h1>
-    <p class="text-muted">Pick a package, then choose a time that works for you.</p>
+  <!-- HEADER -->
+  <div class="container py-5">
+    <h1 class="mb-3">Services</h1>
+    <p class="text-muted">Simple, safe, and fun swim lessons. Pick a package and choose a time that works for you.</p>
+  </div>
 
-    <h2 class="h4 mt-4">Class Packages</h2>
-    <ul>
-      <li>
-        <strong>Starter Splash</strong> — 4 lessons, 30 min each — <strong>$129</strong><br>
-        Small group (max 4). <a href="#schedule">See times</a>
-      </li>
-      <li class="mt-2">
-        <strong>Confidence Builder</strong> — 8 lessons, 30 min each — <strong>$239</strong><br>
-        Steady progress, small group (max 4). <a href="#schedule">See times</a>
-      </li>
-      <li class="mt-2">
-        <strong>Stroke Mastery</strong> — 12 lessons, 45 min each — <strong>$369</strong><br>
-        Technique focus for advanced levels. <a href="#schedule">See times</a>
-      </li>
-    </ul>
+  <!-- PACKAGES -->
+  <section class="container pb-4">
+    <h2 class="h4 mb-3">Class Packages</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5>Starter Splash</h5>
+            <p class="mb-1 text-muted">4 lessons • 30 min</p>
+            <p class="h4 mb-3">$129</p>
+            <ul class="mb-3 pl-3">
+              <li>Small group (max 4)</li>
+              <li>Flexible times</li>
+            </ul>
+            <a href="#schedule" class="btn btn-splash btn-sm">See Schedule</a>
+          </div>
+        </div>
+      </div>
 
-    <p class="mt-3">
-      <strong>Private (1:1):</strong> $55 / 30 min &nbsp; | &nbsp;
-      <strong>Semi-Private (1:2):</strong> $70 / 30 min
-    </p>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5>Confidence Builder</h5>
+            <p class="mb-1 text-muted">8 lessons • 30 min</p>
+            <p class="h4 mb-3">$239</p>
+            <ul class="mb-3 pl-3">
+              <li>Steady progress</li>
+              <li>Small group (max 4)</li>
+            </ul>
+            <a href="#schedule" class="btn btn-splash btn-sm">See Schedule</a>
+          </div>
+        </div>
+      </div>
 
-   
-    <h2 id="schedule" class="h4 mt-4">Weekly Schedule</h2>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5>Stroke Mastery</h5>
+            <p class="mb-1 text-muted">12 lessons • 45 min</p>
+            <p class="h4 mb-3">$369</p>
+            <ul class="mb-3 pl-3">
+              <li>Technique focus</li>
+              <li>Advanced levels</li>
+            </ul>
+            <a href="#schedule" class="btn btn-splash btn-sm">See Schedule</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Simple add-ons line -->
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="mb-2">Private & Semi-Private</h6>
+            <p class="mb-1"><strong>Private (1:1):</strong> $55 / 30 min</p>
+            <p class="mb-0"><strong>Semi-Private (1:2):</strong> $70 / 30 min</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="mb-2">Make-Up & Cancellation</h6>
+            <p class="mb-0">Free make-up within 30 days with 24+ hrs notice. See <a href="faq.html">FAQ</a> for details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule" class="container pb-5">
+    <h2 class="h4 mb-3">Weekly Schedule</h2>
+
+    <!-- A simple list of day sections with cards -->
     <h5 class="mt-3">Monday</h5>
-    <ul>
-      <li>
-        <strong>Water Comfort &amp; Safety (Beginner)</strong> — 3:30–4:00 PM<br>
-        Ages 3–6 · Group (max 4) · Coach: Maya — <a href="contact.html">Reserve</a>
-      </li>
-      <li class="mt-2">
-        <strong>Intro to Strokes (Intermediate)</strong> — 4:15–4:45 PM<br>
-        Ages 6–9 · Group (max 4) · Coach: Liam — <a href="contact.html">Join waitlist</a>
-      </li>
-    </ul>
+    <div class="card mb-2">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <strong>Water Comfort & Safety (Beginner)</strong>
+          <span>3:30–4:00 PM</span>
+        </div>
+        <div class="text-muted">Ages 3–6 • Group (max 4) • Coach: Maya</div>
+        <a class="btn btn-outline-primary btn-sm mt-2" href="contact.html">Reserve</a>
+      </div>
+    </div>
+    <div class="card mb-2">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <strong>Intro to Strokes (Intermediate)</strong>
+          <span>4:15–4:45 PM</span>
+        </div>
+        <div class="text-muted">Ages 6–9 • Group (max 4) • Coach: Liam</div>
+        <a class="btn btn-outline-secondary btn-sm mt-2" href="contact.html">Join Waitlist</a>
+      </div>
+    </div>
 
-    <h5 class="mt-3">Tuesday</h5>
-    <ul>
-      <li>
-        <strong>Parent &amp; Tot (Beginner)</strong> — 10:00–10:30 AM<br>
-        Ages 1–3 · Group (max 6) · Coach: Zoe — <a href="contact.html">Reserve</a>
-      </li>
-    </ul>
+    <h5 class="mt-4">Tuesday</h5>
+    <div class="card mb-2">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <strong>Parent & Tot (Beginner)</strong>
+          <span>10:00–10:30 AM</span>
+        </div>
+        <div class="text-muted">Ages 1–3 • Group (max 6) • Coach: Zoe</div>
+        <a class="btn btn-outline-primary btn-sm mt-2" href="contact.html">Reserve</a>
+      </div>
+    </div>
 
-    <h5 class="mt-3">Thursday</h5>
-    <ul>
-      <li>
-        <strong>Private Lessons (All Levels)</strong> — 3:00–6:00 PM<br>
-        Ages 3+ · 1:1 · Coach: Staff — <a href="contact.html">Request slot</a>
-      </li>
-    </ul>
+    <h5 class="mt-4">Thursday</h5>
+    <div class="card mb-2">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <strong>Private Lessons (All Levels)</strong>
+          <span>3:00–6:00 PM</span>
+        </div>
+        <div class="text-muted">Ages 3+ • 1:1 • Coach: Staff</div>
+        <a class="btn btn-outline-primary btn-sm mt-2" href="contact.html">Request Slot</a>
+      </div>
+    </div>
 
-    <h5 class="mt-3">Saturday</h5>
-    <ul>
-      <li>
-        <strong>Family Splash Hour (All Levels)</strong> — 10:00–11:00 AM<br>
-        Open swim + coaching tips · Team — <a href="contact.html">RSVP</a>
-      </li>
-    </ul>
+    <h5 class="mt-4">Saturday</h5>
+    <div class="card mb-2">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <strong>Family Splash Hour (All Levels)</strong>
+          <span>10:00–11:00 AM</span>
+        </div>
+        <div class="text-muted">Open swim + coaching tips • Coach: Team</div>
+        <a class="btn btn-outline-primary btn-sm mt-2" href="contact.html">RSVP</a>
+      </div>
+    </div>
+  </section>
 
-    <p class="small text-muted mt-3">
-      Not sure which level to choose? <a href="contact.html">Ask for a free skills assessment</a>.
-    </p>
-  </main>
-
+  <!-- FOOTER -->
   <footer class="text-center py-3">
     <small>&copy; 2025 Splashes. Making Waves, One Child at a Time 🌊</small>
   </footer>
 
+  <!-- Scripts (Bootstrap needs these, but no custom JS used) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
