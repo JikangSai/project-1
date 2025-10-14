@@ -4,43 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Splashes | Gallery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .gallery-hero{
+      min-height:220px;
+      background:
+        linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+        center/cover no-repeat url("images/about-us-hero.jpg");
+      display:flex;align-items:center;justify-content:center;text-align:center;color:#fff
+    }
+    .divider-wave{
+      height:40px;
+      background: center/auto 40px repeat-x url("images/splash-wave.png");
+    }
+    .footer-wave{
+      height:36px;
+      background: center/auto 36px no-repeat url("images/footer-logo-wave-small.png");
+      opacity:.7
+    }
+    .thumb{border-radius:.5rem;overflow:hidden}
+    .thumb img{display:block;width:100%;height:auto}
+  </style>
 </head>
+
 <body>
-  <nav>
-    <a href="index.html">Splashes</a> |
-    <a href="index.html">Home</a> |
-    <a href="about.html">About Us</a> |
-    <a href="services.html">Services</a> |
-    <strong>Gallery</strong> |
-    <a href="stories.html">Parents’ Stories</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="faq.html">FAQ</a> |
-    <a href="privacy.html">Privacy Policy</a>
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <a class="navbar-brand" href="index.html">Splashes</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item active"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="stories.html">Parents’ Stories</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main>
-    <h1>Gallery</h1>
-    <p>Click any photo to view the full image.</p>
+  <header class="gallery-hero">
+    <div class="container">
+      <h1 class="mb-2">Gallery</h1>
+      <p class="lead mb-0">Moments from lessons, camps, and family swim.</p>
+    </div>
+  </header>
+  <div class="divider-wave"></div>
 
-    <section>
-      <h2>Photos</h2>
-      <p>
-        <a href="images/gallery1.jpg"><img src="images/gallery1.jpg" alt="Swim photo 1" width="300"></a>
-        <a href="images/gallery2.jpg"><img src="images/gallery2.jpg" alt="Swim photo 2" width="300"></a>
-        <a href="images/gallery3.jpg"><img src="images/gallery3.jpg" alt="Swim photo 3" width="300"></a>
-        <a href="images/gallery4.jpg"><img src="images/gallery4.jpg" alt="Swim photo 4" width="300"></a>
-      </p>
-      <p>
-        <a href="images/gallery5.jpg"><img src="images/gallery5.jpg" alt="Swim photo 5" width="300"></a>
-        <a href="images/gallery6.jpg"><img src="images/gallery6.jpg" alt="Swim photo 6" width="300"></a>
-        <a href="images/gallery7.jpg"><img src="images/gallery7.jpg" alt="Swim photo 7" width="300"></a>
-        <a href="images/gallery8.jpg"><img src="images/gallery8.jpg" alt="Swim photo 8" width="300"></a>
-      </p>
-    </section>
+  <main class="container py-5">
+    <h2 class="h4 mb-4">Photos</h2>
+
+    <div class="row">
+      <!-- swap/add images as you like; these use filenames you provided -->
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <a href="images/home.jpg" class="thumb"><img src="images/home.jpg" alt="Pool & facility"></a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <a href="images/home-hands-on-teaching.jpg" class="thumb"><img src="images/home-hands-on-teaching.jpg" alt="Hands-on teaching"></a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <a href="images/lap-swimming.jpg" class="thumb"><img src="images/lap-swimming.jpg" alt="Lap swimming"></a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <a href="images/summer-swim-camps.jpg" class="thumb"><img src="images/summer-swim-camps.jpg" alt="Summer swim camps"></a>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <a href="images/which-lesson-is-best.jpg" class="thumb"><img src="images/which-lesson-is-best.jpg" alt="Choosing the right lesson"></a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <a href="images/home-our-locations-bg.jpg" class="thumb"><img src="images/home-our-locations-bg.jpg" alt="Our locations"></a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <a href="images/about-our-philosophy-bg.jpg" class="thumb"><img src="images/about-our-philosophy-bg.jpg" alt="Our philosophy"></a>
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3">
+        <a href="images/about-we-do-a-pretty-good-job-bg.jpg" class="thumb"><img src="images/about-we-do-a-pretty-good-job-bg.jpg" alt="We do a pretty good job"></a>
+      </div>
+    </div>
+
+    <p class="small text-muted">Click any image to open it full-size in your browser.</p>
   </main>
 
-  <footer>
+  <div class="footer-wave"></div>
+  <footer class="text-center py-3">
     <small>&copy; 2025 Splashes. Making Waves, One Child at a Time 🌊</small>
   </footer>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
