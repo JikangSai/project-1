@@ -11,7 +11,7 @@
       min-height:220px;
       background:
         linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
-        center/cover no-repeat url("images/about-us-hero.jpg");
+        center/cover no-repeat url("images/about-us-hero.jpeg");
       display:flex;align-items:center;justify-content:center;text-align:center;color:#fff
     }
     .divider-wave{
@@ -23,13 +23,40 @@
       background: center/auto 36px no-repeat url("images/footer-logo-wave-small.png");
       opacity:.7
     }
-    .thumb{border-radius:.5rem;overflow:hidden}
-    .thumb img{display:block;width:100%;height:auto}
+    .gallery-grid .thumb{
+      position:relative;
+      border-radius:.75rem;
+      overflow:hidden;
+      background:#f8f9fa;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      transition:transform .25s ease, box-shadow .25s ease;
+      display:block;
+    }
+    .gallery-grid .thumb:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 28px rgba(0,0,0,.14);
+    }
+    .gallery-grid .thumb img{
+      display:block;width:100%;
+      height:180px;
+      object-fit:cover;
+      filter:saturate(.95);
+      transition:filter .25s ease;
+    }
+    .gallery-grid .thumb:hover img{ filter:saturate(1.1); }
+    .gallery-grid .thumb .caption{
+      position:absolute;left:0;right:0;bottom:0;
+      padding:.5rem .75rem;color:#fff;font-weight:600;font-size:.95rem;
+      text-shadow:0 1px 2px rgba(0,0,0,.6);
+      background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
+    }
+    @media (min-width:768px){ .gallery-grid .thumb img{ height:210px; } }
+    @media (min-width:1200px){ .gallery-grid .thumb img{ height:240px; } }
   </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Splashes</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -59,32 +86,54 @@
   <main class="container py-5">
     <h2 class="h4 mb-4">Photos</h2>
 
-    <div class="row">
-      <!-- swap/add images as you like; these use filenames you provided -->
-      <div class="col-6 col-md-4 col-lg-3 mb-3">
-        <a href="images/home.jpg" class="thumb"><img src="images/home.jpg" alt="Pool & facility"></a>
+    <div class="row gallery-grid">
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <a href="images/home.jpeg" class="thumb" target="_blank" rel="noopener">
+          <img src="images/home.jpeg" alt="Pool & facility">
+          <span class="caption">Pool & facility</span>
+        </a>
       </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-3">
-        <a href="images/home-hands-on-teaching.jpg" class="thumb"><img src="images/home-hands-on-teaching.jpg" alt="Hands-on teaching"></a>
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <a href="images/home-hands-on-teaching.jpeg" class="thumb" target="_blank" rel="noopener">
+          <img src="images/home-hands-on-teaching.jpeg" alt="Hands-on teaching">
+          <span class="caption">Hands-on teaching</span>
+        </a>
       </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-3">
-        <a href="images/lap-swimming.jpg" class="thumb"><img src="images/lap-swimming.jpg" alt="Lap swimming"></a>
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <a href="images/lap-swimming.jpeg" class="thumb" target="_blank" rel="noopener">
+          <img src="images/lap-swimming.jpeg" alt="Lap swimming">
+          <span class="caption">Lap swimming</span>
+        </a>
       </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-3">
-        <a href="images/summer-swim-camps.jpg" class="thumb"><img src="images/summer-swim-camps.jpg" alt="Summer swim camps"></a>
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <a href="images/summer-swim-camps.jpeg" class="thumb" target="_blank" rel="noopener">
+          <img src="images/summer-swim-camps.jpeg" alt="Summer swim camps">
+          <span class="caption">Summer swim camps</span>
+        </a>
       </div>
-
-      <div class="col-6 col-md-4 col-lg-3 mb-3">
-        <a href="images/which-lesson-is-best.jpg" class="thumb"><img src="images/which-lesson-is-best.jpg" alt="Choosing the right lesson"></a>
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <a href="images/which-lesson-is-best.jpeg" class="thumb" target="_blank" rel="noopener">
+          <img src="images/which-lesson-is-best.jpeg" alt="Choosing the right lesson">
+          <span class="caption">Choosing the right lesson</span>
+        </a>
       </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-3">
-        <a href="images/home-our-locations-bg.jpg" class="thumb"><img src="images/home-our-locations-bg.jpg" alt="Our locations"></a>
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <a href="images/home-our-locations-bg.jpeg" class="thumb" target="_blank" rel="noopener">
+          <img src="images/home-our-locations-bg.jpeg" alt="Our locations">
+          <span class="caption">Our locations</span>
+        </a>
       </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-3">
-        <a href="images/about-our-philosophy-bg.jpg" class="thumb"><img src="images/about-our-philosophy-bg.jpg" alt="Our philosophy"></a>
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <a href="images/about-our-philosophy-bg.jpeg" class="thumb" target="_blank" rel="noopener">
+          <img src="images/about-our-philosophy-bg.jpeg" alt="Our philosophy">
+          <span class="caption">Our philosophy</span>
+        </a>
       </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-3">
-        <a href="images/about-we-do-a-pretty-good-job-bg.jpg" class="thumb"><img src="images/about-we-do-a-pretty-good-job-bg.jpg" alt="We do a pretty good job"></a>
+      <div class="col-6 col-md-4 col-lg-3 mb-4">
+        <a href="images/about-we-do-a-pretty-good-job-bg.jpeg" class="thumb" target="_blank" rel="noopener">
+          <img src="images/about-we-do-a-pretty-good-job-bg.jpeg" alt="We do a pretty good job">
+          <span class="caption">We do a pretty good job</span>
+        </a>
       </div>
     </div>
 
@@ -96,6 +145,8 @@
     <small>&copy; 2025 Splashes. Making Waves, One Child at a Time 🌊</small>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
