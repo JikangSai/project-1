@@ -67,3 +67,87 @@ footer small {
   color: #ff7f50;
   font-weight: 600;
 }
+
+/* ===== Pages 6–8 enhancements ===== */
+
+/* Shared spacing/containers */
+.page-header {
+  background: linear-gradient(135deg, rgba(0,153,204,.08), rgba(255,127,80,.08));
+  padding: 2.5rem 0 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.page-header h1 { margin-bottom: .25rem; }
+.lead-sub { color: #0e242b; opacity: .8; }
+
+/* Contact (form) */
+.form-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: .75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+.form-card .form-control {
+  border-radius: .5rem;
+}
+.form-card .btn-primary {
+  background-color: #ff7f50;
+  border-color: #ff7f50;
+  font-weight: 600;
+}
+.form-card .btn-primary:hover {
+  background-color: #ff9966;
+  border-color: #ff9966;
+}
+
+/* Map card */
+.map-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: .75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+/* FAQ (accordion) */
+#faq-accordion .card {
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: .75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.05);
+  margin-bottom: .75rem;
+}
+#faq-accordion .card-header {
+  background: #0f1633;
+  color: #e0f7fa;
+}
+#faq-accordion .btn-link {
+  color: #e0f7fa;
+  text-decoration: none;
+  font-weight: 600;
+}
+#faq-accordion .btn-link:hover { color: #ff7f50; }
+
+/* Privacy */
+.legal h2 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+.legal p, .legal li {
+  line-height: 1.75;
+}
+.legal .note {
+  font-size: .95rem;
+  opacity: .85;
+}
+
+/* Small helpers */
+.badge-soft {
+  background: rgba(255,127,80,.12);
+  color: #ff7f50;
+  font-weight: 600;
+  padding: .4rem .6rem;
+  border-radius: 999px;
+}
+
