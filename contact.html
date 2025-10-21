@@ -8,6 +8,11 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .badge-soft{background:#ffe1d3;color:#ff6f3d;border-radius:999px;padding:.25rem .6rem;font-weight:700;cursor:pointer}
+    .qr-chip{border-radius:999px}
+    #qrPanel.collapse:not(.show){display:none}
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark">
@@ -40,7 +45,46 @@
     <div class="row">
       <div class="col-lg-6 mb-4">
         <div class="form-card">
-          <h2 class="h4 mb-3">Send a Message <span class="badge-soft">Quick Reply</span></h2>
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="h4 mb-3">Send a Message</h2>
+            <span id="qrToggle" class="badge-soft" role="button" aria-controls="qrPanel" aria-expanded="false">Quick Reply</span>
+          </div>
+
+          <div id="qrPanel" class="collapse mb-3">
+            <div class="d-flex flex-wrap">
+              <button type="button" class="btn btn-outline-secondary btn-sm mr-2 mb-2 qr-chip"
+                data-subject="Enrollment Inquiry"
+                data-body="Hi Splashes team, I’m interested in enrolling my child [Name, Age] in swimming lessons. Could you share next available start dates and class levels? Thanks!">
+                Enrollment
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-sm mr-2 mb-2 qr-chip"
+                data-subject="Schedule & Availability"
+                data-body="Hello! What class times are available on weekdays after 5pm or weekends? We prefer Sunnyvale location.">
+                Schedule
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-sm mr-2 mb-2 qr-chip"
+                data-subject="Pricing & Packages"
+                data-body="Hi, could you please send current pricing, package options, and any sibling discounts?">
+                Pricing
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-sm mr-2 mb-2 qr-chip"
+                data-subject="Make-up Policy"
+                data-body="Hi, what is your policy for missed classes and how do we schedule a make-up?">
+                Make-ups
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-sm mr-2 mb-2 qr-chip"
+                data-subject="Private Lessons"
+                data-body="Hello, do you offer private lessons? If yes, what are the available times and rates?">
+                Private
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-sm mr-2 mb-2 qr-chip"
+                data-subject="Location & Parking"
+                data-body="Hi! Could you confirm parking info and the best entrance for first-time visitors?">
+                Parking
+              </button>
+            </div>
+          </div>
+
           <form id="messageForm" novalidate>
             <div class="form-group">
               <label for="name">Full Name</label>
@@ -111,8 +155,22 @@
       </div>
     </div>
   </div>
+
   <script>
     $(function () {
+      $('#qrToggle').on('click', function(){
+        $('#qrPanel').collapse('toggle');
+        var expanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', !expanded);
+      });
+
+      $('.qr-chip').on('click', function(){
+        var s = $(this).data('subject') || '';
+        var b = $(this).data('body') || '';
+        $('#subject').val(s);
+        $('#message').val(b).focus();
+      });
+
       $('#messageForm').on('submit', function (e) {
         e.preventDefault();
         var form = this;
