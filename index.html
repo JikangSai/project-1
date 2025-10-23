@@ -6,18 +6,22 @@
   <title>Splashes | Home</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .jumbotron{background:linear-gradient(180deg,#e0f7fa 0%,#ffffff 100%);margin-bottom:0}
+    .text-highlight{color:#ff7a59;font-weight:700}
+    .btn-splash{background:#ff7a59;color:#fff;border:none}
+    .btn-splash:hover{filter:brightness(0.95);color:#fff}
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/logo.jpeg" alt="Splashes Logo" style="height: 40px; margin-right: 10px;">
+      <img src="images/logo.jpeg" alt="Splashes Logo" style="height:40px;margin-right:10px">
       <span>Splashes</span>
     </a>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
@@ -35,15 +39,16 @@
   <header class="jumbotron text-center">
     <h1 class="display-4">Welcome to Splashes!</h1>
     <p class="lead">Fun, Safe, and <span class="text-highlight">Splash-tastic</span> Swimming Lessons for Kids</p>
+    <a href="services.html" class="btn btn-splash btn-lg mt-3">Get Started</a>
   </header>
 
-  <div class="container py-4 text-center">
-    <h2>Our Mission</h2>
-    <p>At Splashes, we turn fear into confidence and swimming into fun! Every child deserves to enjoy water safely and happily.</p>
-    <a href="about.html" class="btn btn-splash btn-lg mt-3">Learn More</a>
+  <div class="container text-center py-5">
+    <h2 class="mb-3">Our Mission</h2>
+    <p class="mb-4">At Splashes, we turn fear into confidence and swimming into fun! Every child deserves to enjoy water safely and happily.</p>
+    <a href="about.html" class="btn btn-primary">Learn More</a>
   </div>
 
-  <footer class="text-center py-3 mt-4">
+  <footer class="text-center py-3 mt-4 bg-dark text-white">
     <small>&copy; 2025 Splashes. Making Waves, One Child at a Time 🌊</small>
   </footer>
 

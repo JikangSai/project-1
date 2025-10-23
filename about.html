@@ -6,11 +6,18 @@
   <title>Splashes | About Us</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .hero-banner{background:linear-gradient(180deg,#e0f7fa 0%,#ffffff 100%);padding:60px 0;text-align:center}
+    .btn-splash{background:#ff7a59;color:#fff;border:none}
+    .btn-splash:hover{filter:brightness(0.95);color:#fff}
+  </style>
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark">
-    <a class="navbar-brand" href="index.html">Splashes</a>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo.jpeg" alt="Splashes Logo" style="height:40px;margin-right:10px">
+      <span>Splashes</span>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,20 +35,28 @@
     </div>
   </nav>
 
-  <div class="container py-5">
-    <h1>About Splashes</h1>
-    <p>Splashes offers fun, engaging, and safe swimming lessons for children of all skill levels. Our certified instructors provide personalized attention and encourage confidence in the water.</p>
-
-    <h3>Our Vision</h3>
-    <p>To empower every child with life-saving swimming skills while promoting physical fitness and water confidence.</p>
-
-    <h3>Meet Our Instructors</h3>
-    <p>Our team of professional instructors are certified, experienced, and passionate about helping children learn and grow through swimming.</p>
-
-    <a href="services.html" class="btn btn-splash mt-3">View Our Classes</a>
+  <div class="hero-banner">
+    <h1 class="display-4 mb-3">About Splashes</h1>
+    <p class="lead">Fun, Safe, and Splash-tastic Swimming Lessons for Kids</p>
   </div>
 
-  <footer class="text-center py-3 mt-4">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm p-4 border-0">
+          <h2 class="h4 mb-3">Who We Are</h2>
+          <p>Splashes offers fun, engaging, and safe swimming lessons for children of all skill levels. Our certified instructors provide personalized attention and encourage confidence in the water.</p>
+          <h3 class="h5 mt-4">Our Vision</h3>
+          <p>To empower every child with life-saving swimming skills while promoting physical fitness and water confidence.</p>
+          <h3 class="h5 mt-4">Meet Our Instructors</h3>
+          <p>Our team of professional instructors are certified, experienced, and passionate about helping children learn and grow through swimming.</p>
+          <a href="services.html" class="btn btn-splash mt-3">View Our Classes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-3 mt-4 bg-dark text-white">
     <small>&copy; 2025 Splashes. Making Waves, One Child at a Time 🌊</small>
   </footer>
 
