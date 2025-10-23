@@ -15,11 +15,11 @@
     }
     .divider-wave {
       height:40px;
-      background: center/auto 40px repeat-x url("images/splash-wave.png");
+      background:center/auto 40px repeat-x url("images/splash-wave.png");
     }
     .footer-wave {
       height:36px;
-      background: center/auto 36px no-repeat url("images/footer-logo-wave-small.png");
+      background:center/auto 36px no-repeat url("images/footer-logo-wave-small.png");
       opacity:.7;
     }
     .gallery-grid .thumb {
@@ -38,7 +38,7 @@
     }
     .gallery-grid .thumb img {
       display:block;width:100%;
-      height:180px;
+      height:200px;
       object-fit:cover;
       filter:saturate(.95);
       transition:filter .25s ease;
@@ -50,6 +50,8 @@
       text-shadow:0 1px 2px rgba(0,0,0,.6);
       background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
     }
+
+    /* Modal styling */
     .modal-content {
       background:transparent;
       border:none;
@@ -58,18 +60,47 @@
       width:100%;
       border-radius:.75rem;
     }
-    @media (min-width:768px){ .gallery-grid .thumb img{ height:210px; } }
-    @media (min-width:1200px){ .gallery-grid .thumb img{ height:240px; } }
+    .modal-backdrop.show {
+      opacity: 0.9;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Feature sections */
+    .feature-section {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: 2rem;
+    }
+    .feature-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.45);
+    }
+    .feature-section .content {
+      position: relative;
+      z-index: 2;
+    }
 
     /* Location Section */
     .location-section {
       margin-top: 4rem;
+      text-align:center;
     }
     iframe {
       width:100%;
       height:350px;
       border:0;
       border-radius:0.5rem;
+    }
+
+    @media (max-width:575px) {
+      .gallery-grid .thumb img { height:150px; }
     }
   </style>
 </head>
@@ -110,71 +141,65 @@
       <div class="col-6 col-md-4 col-lg-3 mb-4">
         <div class="thumb" data-src="images/home.jpeg" data-caption="Pool & facility">
           <img src="images/home.jpeg" alt="Pool & facility">
-          <span class="caption">Pool & facility</span>
+          <span class="caption">Pool & Facility</span>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 mb-4">
         <div class="thumb" data-src="images/home-hands-on-teaching.jpeg" data-caption="Hands-on teaching">
           <img src="images/home-hands-on-teaching.jpeg" alt="Hands-on teaching">
-          <span class="caption">Hands-on teaching</span>
+          <span class="caption">Hands-on Teaching</span>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 mb-4">
         <div class="thumb" data-src="images/lap-swimming.jpeg" data-caption="Lap swimming">
           <img src="images/lap-swimming.jpeg" alt="Lap swimming">
-          <span class="caption">Lap swimming</span>
+          <span class="caption">Lap Swimming</span>
         </div>
       </div>
       <div class="col-6 col-md-4 col-lg-3 mb-4">
         <div class="thumb" data-src="images/summer-swim-camps.jpeg" data-caption="Summer swim camps">
           <img src="images/summer-swim-camps.jpeg" alt="Summer swim camps">
-          <span class="caption">Summer swim camps</span>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-4">
-        <div class="thumb" data-src="images/which-lesson-is-best.jpeg" data-caption="Choosing the right lesson">
-          <img src="images/which-lesson-is-best.jpeg" alt="Choosing the right lesson">
-          <span class="caption">Choosing the right lesson</span>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-4">
-        <div class="thumb" data-src="images/home-our-locations-bg.jpeg" data-caption="Our locations">
-          <img src="images/home-our-locations-bg.jpeg" alt="Our locations">
-          <span class="caption">Our locations</span>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-4">
-        <div class="thumb" data-src="images/about-our-philosophy-bg.jpeg" data-caption="Our philosophy">
-          <img src="images/about-our-philosophy-bg.jpeg" alt="Our philosophy">
-          <span class="caption">Our philosophy</span>
-        </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-3 mb-4">
-        <div class="thumb" data-src="images/about-we-do-a-pretty-good-job-bg.jpeg" data-caption="We do a pretty good job">
-          <img src="images/about-we-do-a-pretty-good-job-bg.jpeg" alt="We do a pretty good job">
-          <span class="caption">We do a pretty good job</span>
+          <span class="caption">Summer Swim Camps</span>
         </div>
       </div>
     </div>
 
-    <!-- Our Locations Section -->
-    <section class="location-section">
-      <h2 class="h4 mb-3 mt-5">Our Locations</h2>
-      <p>Splashes Swim School is proud to serve families across the Bay Area:</p>
-      <ul class="mb-4">
-        <li><strong>Oakland:</strong> 123 Lake Merritt Blvd, Oakland, CA 94612</li>
-        <li><strong>San Francisco:</strong> 456 Ocean Beach Ave, San Francisco, CA 94121</li>
-        <li><strong>Berkeley:</strong> 789 Shattuck Ave, Berkeley, CA 94704</li>
-        <li><strong>Sunnyvale:</strong> 123 Splash Lane, Sunnyvale, CA 94000</li>
-      </ul>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.281310843661!2d-122.042294923423!3d37.36883203774121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0cbacb56a4f%3A0x2b067d4eb67e63ee!2sSunnyvale%2C%20CA!5e0!3m2!1sen!2sus!4v1730152222000!5m2!1sen!2sus" 
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </section>
+    <p class="small text-muted text-center">Click any image to view larger.</p>
   </main>
+
+  <!-- Our Philosophy Section -->
+  <section class="feature-section" style="background-image: url('images/about-our-philosophy-bg.jpeg');">
+    <div class="content container">
+      <h2 class="display-5 mb-3">Our Philosophy</h2>
+      <p class="lead">At Splashes, we believe learning to swim should be joyful and confidence-building. Our approach blends fun, trust, and safety to help every child thrive — in and out of the water.</p>
+    </div>
+  </section>
+
+  <!-- We Do a Pretty Good Job Section -->
+  <section class="feature-section" style="background-image: url('images/about-we-do-a-pretty-good-job-bg.jpeg');">
+    <div class="content container">
+      <h2 class="display-5 mb-3">We Do a Pretty Good Job</h2>
+      <p class="lead">From beginners to advanced swimmers, families trust Splashes because we create a positive, engaging environment where every milestone matters — one splash at a time.</p>
+    </div>
+  </section>
+
+  <!-- Our Locations Section -->
+  <section class="location-section container">
+    <h2 class="h4 mb-3 mt-5">Our Locations</h2>
+    <p>Splashes Swim School proudly serves families across the Bay Area:</p>
+    <ul class="mb-4 text-left d-inline-block">
+      <li><strong>Oakland:</strong> 123 Lake Merritt Blvd, Oakland, CA 94612</li>
+      <li><strong>San Francisco:</strong> 456 Ocean Beach Ave, San Francisco, CA 94121</li>
+      <li><strong>Berkeley:</strong> 789 Shattuck Ave, Berkeley, CA 94704</li>
+      <li><strong>Sunnyvale:</strong> 123 Splash Lane, Sunnyvale, CA 94000</li>
+    </ul>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.281310843661!2d-122.042294923423!3d37.36883203774121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0cbacb56a4f%3A0x2b067d4eb67e63ee!2sSunnyvale%2C%20CA!5e0!3m2!1sen!2sus!4v1730152222000!5m2!1sen!2sus" 
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
 
   <!-- Image Modal -->
   <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -187,11 +212,11 @@
   </div>
 
   <div class="footer-wave"></div>
-  <footer class="text-center py-3">
+  <footer class="text-center py-3 bg-dark text-white">
     <small>&copy; 2025 Splashes. Making Waves, One Child at a Time 🌊</small>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
